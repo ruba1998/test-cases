@@ -1,6 +1,6 @@
 <project default="compile">
-<property name ="src.java.dir" location="./src/hw3/"/>
-<property name ="src.test.dir" location="./testsrc/hw3/"/>
+<property name ="src.java.dir" location="./src/shoping_cart/"/>
+<property name ="src.test.dir" location="./src/testing"/>
 <property name ="result.dir" location="./target"/>
 <property name ="result.javaclasses.dir" location="${result.dir}/classes"/>
 <property name ="result.testclasses.dir" location="${result.dir}/testclasses"/>
@@ -13,7 +13,7 @@
 <!-- comment Make jar or executable product -->
 <target name ="jar" depends ="compile">
           <jar destfile="${result.jar.file}">
-                   <fileset dir ="${result.javaclasses.jar}">
+                   <fileset dir ="${result.javaclasses.dir}">
            </fileset>
               </jar>
         </target>
@@ -25,8 +25,6 @@
         <pathelement location="./Lib/hamcrest-core-1.3.jar"/>
     </path>
     
-        
-        
         
     <target name="compile-testcases" depends="compile">
         <mkdir dir="${result.testclasses.dir}"/>
